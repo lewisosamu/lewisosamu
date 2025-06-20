@@ -1,0 +1,193 @@
+.header {
+  display: flex;
+  column-gap: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(60px);
+  -webkit-backdrop-filter: blur(60px);
+  position:fixed;
+  width: 100%;
+  height: 65px;
+  align-items: center;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  font-family: chivo;
+  font-weight: 300;
+  font-size: medium;
+  color: rgb(165, 165, 165);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-left: 25px;
+  transition: 500ms;
+}
+
+.logo:active,.logo:hover {
+  color: rgb(200, 200, 200);
+  cursor: pointer;
+}
+
+.header form {
+  margin-left: auto;
+}
+
+.search{
+  height: 35px;
+  padding-left: 8px;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  border: 1px solid rgb(52, 52, 52);
+  transition: all 700ms;
+  width: clamp(20px,500px,500px);
+}
+
+.search-input {
+  width: 100%;
+  margin-left: 3px;
+  margin-right: 5px;
+  font-size: medium;
+  font-family: chivo;
+  font-weight: 300;
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+.search-icon {
+  scale: .75;
+  margin-left: 2px;
+  color:rgb(165, 165, 165);
+}
+
+.search:hover {
+  background-color: rgb(255, 255, 255, .1);
+}
+
+.search:focus-within {
+  background-color: rgb(255, 255, 255, .1);
+  border: 1px solid rgb(165, 165, 165)
+}
+
+.search-input::placeholder {
+  color: rgb(165, 165, 165);
+  opacity: 1;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
+
+.daikon{
+  display: inline-block;
+  max-width: 30px;
+  margin-right: 15px;
+  cursor:grab;
+  transition: 50ms;
+}
+
+.daikon:active{
+  scale: 1.3;
+}
+
+.master-grid {
+  display: grid;
+  margin-top: 100px;
+  margin-left: 15px;
+  margin-right: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+input:focus {
+  outline: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+.box {
+  display: inline-block;
+  height: min-content;
+  border: 10px solid transparent;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: all 500ms;
+  background-clip: padding-box;
+  text-decoration: none;
+}
+
+.box:hover {
+  border-color: rgb(25, 25, 25);
+  background-color: rgb(25, 25, 25);
+}
+
+.image {
+  aspect-ratio: 1/1;
+  width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.titles {
+  display: grid;
+  grid-template-columns: 35px 1fr;
+  grid-template-rows: 50px;
+  align-items: center;
+}
+
+.album {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  font-family: chivo;
+  font-size: large;
+  margin: 0;
+  max-height: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.artist {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  width: 25px;
+  height: 25px;
+  border-radius: 100px;
+}
+
+.artist-name{
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  color: rgb(165, 165, 165);
+  font-family: chivo; 
+  font-weight: 300;
+  font-size: small;
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+  .word{
+  font-weight: 400;
+}
